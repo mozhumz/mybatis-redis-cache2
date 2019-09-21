@@ -1,0 +1,636 @@
+2019-09-21 16:19:19.048 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 50 ] - Starting SpringBootMybatisCache2RedisApplicationTests on HYJ-1 with PID 12332 (started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:19:19.050 [ main ] - [ DEBUG ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 53 ] - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+2019-09-21 16:19:19.052 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:19:20.436 [ main ] - [ DEBUG ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 437 ] - Identified candidate component class: file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\com\example\demo\mapper\UserMapper.class]
+2019-09-21 16:19:20.438 [ main ] - [ DEBUG ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 180 ] - Creating MapperFactoryBean with name 'userMapper' and 'com.example.demo.mapper.UserMapper' mapperInterface
+2019-09-21 16:19:20.438 [ main ] - [ DEBUG ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 216 ] - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+2019-09-21 16:19:21.944 [ main ] - [ DEBUG ] [ i.n.util.internal.logging.InternalLoggerFactory : 71 ] - Using SLF4J as the default logging framework
+2019-09-21 16:19:21.948 [ main ] - [ DEBUG ] [ io.lettuce.core.resource.DefaultClientResources : 76 ] - -Dio.netty.eventLoopThreads: 4
+2019-09-21 16:19:21.977 [ main ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 81 ] - -Dio.netty.leakDetection.level: simple
+2019-09-21 16:19:21.978 [ main ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetector : 81 ] - -Dio.netty.leakDetection.targetRecords: 4
+2019-09-21 16:19:21.994 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 71 ] - Platform: Windows
+2019-09-21 16:19:21.996 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 76 ] - -Dio.netty.noUnsafe: false
+2019-09-21 16:19:21.997 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 76 ] - Java version: 11
+2019-09-21 16:19:21.999 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 71 ] - sun.misc.Unsafe.theUnsafe: available
+2019-09-21 16:19:21.999 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 71 ] - sun.misc.Unsafe.copyMemory: available
+2019-09-21 16:19:22.001 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 71 ] - java.nio.Buffer.address: available
+2019-09-21 16:19:22.010 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 91 ] - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:162)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:207)
+	at io.netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory.newResourceLeakDetector(ResourceLeakDetectorFactory.java:201)
+	at io.netty.util.HashedWheelTimer.<clinit>(HashedWheelTimer.java:88)
+	at io.lettuce.core.resource.DefaultClientResources.<init>(DefaultClientResources.java:163)
+	at io.lettuce.core.resource.DefaultClientResources$Builder.build(DefaultClientResources.java:461)
+	at io.lettuce.core.resource.DefaultClientResources.create(DefaultClientResources.java:229)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.lettuceClientResources(LettuceConnectionConfiguration.java:70)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.CGLIB$lettuceClientResources$1(<generated>)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf$$FastClassBySpringCGLIB$$4c2b148b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.lettuceClientResources(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2019-09-21 16:19:22.012 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 81 ] - java.nio.Bits.unaligned: unavailable true
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$5.run(PlatformDependent0.java:273)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:266)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:162)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:207)
+	at io.netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory.newResourceLeakDetector(ResourceLeakDetectorFactory.java:201)
+	at io.netty.util.HashedWheelTimer.<clinit>(HashedWheelTimer.java:88)
+	at io.lettuce.core.resource.DefaultClientResources.<init>(DefaultClientResources.java:163)
+	at io.lettuce.core.resource.DefaultClientResources$Builder.build(DefaultClientResources.java:461)
+	at io.lettuce.core.resource.DefaultClientResources.create(DefaultClientResources.java:229)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.lettuceClientResources(LettuceConnectionConfiguration.java:70)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.CGLIB$lettuceClientResources$1(<generated>)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf$$FastClassBySpringCGLIB$$4c2b148b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.lettuceClientResources(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2019-09-21 16:19:22.015 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 91 ] - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6eebc39e
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Unknown Source)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:315)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.PlatformDependent0.<clinit>(PlatformDependent0.java:306)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:208)
+	at io.netty.util.internal.PlatformDependent.<clinit>(PlatformDependent.java:79)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:162)
+	at io.netty.util.ResourceLeakDetector.<init>(ResourceLeakDetector.java:207)
+	at io.netty.util.ResourceLeakDetectorFactory$DefaultResourceLeakDetectorFactory.newResourceLeakDetector(ResourceLeakDetectorFactory.java:201)
+	at io.netty.util.HashedWheelTimer.<clinit>(HashedWheelTimer.java:88)
+	at io.lettuce.core.resource.DefaultClientResources.<init>(DefaultClientResources.java:163)
+	at io.lettuce.core.resource.DefaultClientResources$Builder.build(DefaultClientResources.java:461)
+	at io.lettuce.core.resource.DefaultClientResources.create(DefaultClientResources.java:229)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration.lettuceClientResources(LettuceConnectionConfiguration.java:70)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.CGLIB$lettuceClientResources$1(<generated>)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf$$FastClassBySpringCGLIB$$4c2b148b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.springframework.boot.autoconfigure.data.redis.LettuceConnectionConfiguration$$EnhancerBySpringCGLIB$$b4efabcf.lettuceClientResources(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:818)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:724)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:474)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:583)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:372)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:139)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+2019-09-21 16:19:22.019 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent0 : 76 ] - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2019-09-21 16:19:22.020 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - sun.misc.Unsafe: available
+2019-09-21 16:19:22.021 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - maxDirectMemory: 3193962496 bytes (maybe)
+2019-09-21 16:19:22.022 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - -Dio.netty.tmpdir: C:\Users\ADMINI~1\AppData\Local\Temp (java.io.tmpdir)
+2019-09-21 16:19:22.022 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2019-09-21 16:19:22.024 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - -Dio.netty.noPreferDirect: false
+2019-09-21 16:19:22.024 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - -Dio.netty.maxDirectMemory: -1 bytes
+2019-09-21 16:19:22.024 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 76 ] - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2019-09-21 16:19:22.025 [ main ] - [ DEBUG ] [ io.netty.util.internal.CleanerJava9 : 71 ] - java.nio.ByteBuffer.cleaner(): available
+2019-09-21 16:19:22.026 [ main ] - [ DEBUG ] [ io.netty.util.ResourceLeakDetectorFactory : 76 ] - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2440022a
+2019-09-21 16:19:22.033 [ main ] - [ DEBUG ] [ io.netty.util.internal.PlatformDependent : 71 ] - org.jctools-core.MpscChunkedArrayQueue: available
+2019-09-21 16:19:22.040 [ main ] - [ DEBUG ] [ reactor.util.Loggers$LoggerFactory : 213 ] - Using Slf4j logging framework
+2019-09-21 16:19:22.098 [ main ] - [ DEBUG ] [ reactor.core.publisher.UnsafeSupport : 213 ] - Starting UnsafeSupport init in Java 11
+2019-09-21 16:19:22.099 [ main ] - [ DEBUG ] [ reactor.core.publisher.UnsafeSupport : 213 ] - Unsafe is available
+2019-09-21 16:19:22.116 [ main ] - [ DEBUG ] [ io.lettuce.core.resource.DefaultClientResources : 71 ] - LatencyUtils/HdrUtils are not available, metrics are disabled
+2019-09-21 16:19:22.222 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.numHeapArenas: 8
+2019-09-21 16:19:22.223 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.numDirectArenas: 8
+2019-09-21 16:19:22.223 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.pageSize: 8192
+2019-09-21 16:19:22.223 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.maxOrder: 11
+2019-09-21 16:19:22.224 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.chunkSize: 16777216
+2019-09-21 16:19:22.224 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.tinyCacheSize: 512
+2019-09-21 16:19:22.224 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.smallCacheSize: 256
+2019-09-21 16:19:22.224 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.normalCacheSize: 64
+2019-09-21 16:19:22.225 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2019-09-21 16:19:22.225 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.cacheTrimInterval: 8192
+2019-09-21 16:19:22.226 [ main ] - [ DEBUG ] [ io.netty.buffer.PooledByteBufAllocator : 76 ] - -Dio.netty.allocator.useCacheForAllThreads: true
+2019-09-21 16:19:22.242 [ main ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 76 ] - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2019-09-21 16:19:22.242 [ main ] - [ DEBUG ] [ io.netty.util.internal.InternalThreadLocalMap : 76 ] - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2019-09-21 16:19:22.418 [ main ] - [ DEBUG ] [ org.apache.ibatis.logging.LogFactory : 135 ] - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+2019-09-21 16:19:22.561 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 495 ] - Driver class com.mysql.jdbc.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@2437c6dc
+2019-09-21 16:19:22.811 [ main ] - [ DEBUG ] [ org.mybatis.spring.SqlSessionFactoryBean : 529 ] - Parsed mapper file: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'
+2019-09-21 16:19:23.223 [ main ] - [ DEBUG ] [ o.h.v.i.engine.resolver.TraversableResolvers : 60 ] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-09-21 16:19:23.224 [ main ] - [ DEBUG ] [ o.h.v.m.ResourceBundleMessageInterpolator : 89 ] - Loaded expression factory via original TCCL
+2019-09-21 16:19:23.234 [ main ] - [ DEBUG ] [ o.h.v.i.engine.resolver.TraversableResolvers : 60 ] - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2019-09-21 16:19:23.235 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ConfigurationImpl : 148 ] - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2019-09-21 16:19:23.236 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ConfigurationImpl : 180 ] - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2019-09-21 16:19:23.238 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ConfigurationImpl : 194 ] - Setting custom ParameterNameProvider of type org.springframework.validation.beanvalidation.LocalValidatorFactoryBean$1
+2019-09-21 16:19:23.240 [ main ] - [ DEBUG ] [ o.h.v.internal.xml.config.ValidationXmlParser : 120 ] - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2019-09-21 16:19:23.240 [ main ] - [ DEBUG ] [ o.h.v.internal.xml.config.ResourceLoaderHelper : 53 ] - Trying to load META-INF/validation.xml via user class loader
+2019-09-21 16:19:23.241 [ main ] - [ DEBUG ] [ o.h.v.internal.xml.config.ResourceLoaderHelper : 60 ] - Trying to load META-INF/validation.xml via TCCL
+2019-09-21 16:19:23.242 [ main ] - [ DEBUG ] [ o.h.v.internal.xml.config.ResourceLoaderHelper : 66 ] - Trying to load META-INF/validation.xml via Hibernate Validator's class loader
+2019-09-21 16:19:23.243 [ main ] - [ DEBUG ] [ o.h.v.internal.xml.config.ValidationXmlParser : 127 ] - No META-INF/validation.xml found. Using annotation based configuration only.
+2019-09-21 16:19:23.252 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ValidatorFactoryImpl : 578 ] - HV000234: Using org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator as ValidatorFactory-scoped message interpolator.
+2019-09-21 16:19:23.252 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ValidatorFactoryImpl : 579 ] - HV000234: Using org.hibernate.validator.internal.engine.resolver.TraverseAllTraversableResolver as ValidatorFactory-scoped traversable resolver.
+2019-09-21 16:19:23.254 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ValidatorFactoryImpl : 580 ] - HV000234: Using org.hibernate.validator.internal.util.ExecutableParameterNameProvider as ValidatorFactory-scoped parameter name provider.
+2019-09-21 16:19:23.254 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ValidatorFactoryImpl : 581 ] - HV000234: Using org.hibernate.validator.internal.engine.DefaultClockProvider as ValidatorFactory-scoped clock provider.
+2019-09-21 16:19:23.255 [ main ] - [ DEBUG ] [ o.h.validator.internal.engine.ValidatorFactoryImpl : 582 ] - HV000234: Using org.hibernate.validator.internal.engine.scripting.DefaultScriptEvaluatorFactory as ValidatorFactory-scoped script evaluator factory.
+2019-09-21 16:19:24.893 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 59 ] - Started SpringBootMybatisCache2RedisApplicationTests in 6.974 seconds (JVM running for 9.305)
+2019-09-21 16:19:25.335 [ main ] - [ DEBUG ] [ org.mybatis.spring.SqlSessionUtils : 97 ] - Creating a new SqlSession
+2019-09-21 16:19:25.351 [ main ] - [ DEBUG ] [ org.mybatis.spring.SqlSessionUtils : 148 ] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26463a6] was not registered for synchronization because synchronization is not active
+2019-09-21 16:19:25.388 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1119 ] - HikariPool-1 - configuration:
+2019-09-21 16:19:25.392 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - allowPoolSuspension.............false
+2019-09-21 16:19:25.393 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - autoCommit......................true
+2019-09-21 16:19:25.393 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - catalog.........................none
+2019-09-21 16:19:25.395 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - connectionInitSql...............none
+2019-09-21 16:19:25.397 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - connectionTestQuery.............none
+2019-09-21 16:19:25.398 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - connectionTimeout...............30000
+2019-09-21 16:19:25.401 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - dataSource......................none
+2019-09-21 16:19:25.402 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - dataSourceClassName.............none
+2019-09-21 16:19:25.403 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - dataSourceJNDI..................none
+2019-09-21 16:19:25.404 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - dataSourceProperties............{password=<masked>}
+2019-09-21 16:19:25.405 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - driverClassName................."com.mysql.jdbc.Driver"
+2019-09-21 16:19:25.406 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - healthCheckProperties...........{}
+2019-09-21 16:19:25.406 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - healthCheckRegistry.............none
+2019-09-21 16:19:25.407 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - idleTimeout.....................600000
+2019-09-21 16:19:25.407 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - initializationFailFast..........true
+2019-09-21 16:19:25.408 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - initializationFailTimeout.......1
+2019-09-21 16:19:25.408 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - isolateInternalQueries..........false
+2019-09-21 16:19:25.409 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - jdbc4ConnectionTest.............false
+2019-09-21 16:19:25.410 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - jdbcUrl.........................jdbc:mysql://127.0.0.1:3306/hyj?characterEncoding=UTF-8&amp;allowMultiQueries=true
+2019-09-21 16:19:25.410 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - leakDetectionThreshold..........0
+2019-09-21 16:19:25.412 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - maxLifetime.....................1800000
+2019-09-21 16:19:25.413 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - maximumPoolSize.................10
+2019-09-21 16:19:25.413 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - metricRegistry..................none
+2019-09-21 16:19:25.414 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - metricsTrackerFactory...........none
+2019-09-21 16:19:25.415 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - minimumIdle.....................10
+2019-09-21 16:19:25.416 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - password........................<masked>
+2019-09-21 16:19:25.417 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - poolName........................"HikariPool-1"
+2019-09-21 16:19:25.418 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - readOnly........................false
+2019-09-21 16:19:25.420 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - registerMbeans..................false
+2019-09-21 16:19:25.421 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - scheduledExecutor...............none
+2019-09-21 16:19:25.422 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - scheduledExecutorService........internal
+2019-09-21 16:19:25.422 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - schema..........................none
+2019-09-21 16:19:25.423 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - threadFactory...................internal
+2019-09-21 16:19:25.424 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - transactionIsolation............default
+2019-09-21 16:19:25.425 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - username........................"root"
+2019-09-21 16:19:25.426 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.HikariConfig : 1151 ] - validationTimeout...............5000
+2019-09-21 16:19:25.427 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:19:25.791 [ main ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 538 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@5c4714ef
+2019-09-21 16:19:25.794 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:19:25.797 [ main ] - [ DEBUG ] [ o.m.spring.transaction.SpringManagedTransaction : 87 ] - JDBC Connection [HikariProxyConnection@1221872454 wrapping com.mysql.jdbc.JDBC4Connection@5c4714ef] will not be managed by Spring
+2019-09-21 16:19:25.804 [ main ] - [ DEBUG ] [ com.example.demo.mapper.UserMapper.insertOne : 159 ] - ==>  Preparing: INSERT INTO `t_USER` (name, gender) VALUES (?, ?) 
+2019-09-21 16:19:25.845 [ main ] - [ DEBUG ] [ com.example.demo.mapper.UserMapper.insertOne : 159 ] - ==> Parameters: test(String), 1(Integer)
+2019-09-21 16:19:25.861 [ main ] - [ DEBUG ] [ org.mybatis.spring.SqlSessionUtils : 191 ] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26463a6]
+2019-09-21 16:19:25.921 [ HikariPool-1 housekeeper ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 404 ] - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+2019-09-21 16:19:25.946 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@32fae
+2019-09-21 16:19:25.983 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@748e1263
+2019-09-21 16:19:26.012 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@766d352c
+2019-09-21 16:19:26.028 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@6d58fdf3
+2019-09-21 16:19:26.042 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@4f20cfe0
+2019-09-21 16:19:26.058 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@a218302
+2019-09-21 16:19:26.058 [ Thread-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:19:26.058 [ Thread-1 ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 404 ] - HikariPool-1 - Before shutdown stats (total=7, active=0, idle=7, waiting=0)
+2019-09-21 16:19:26.063 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@5c4714ef: (connection evicted)
+2019-09-21 16:19:26.071 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@32fae: (connection evicted)
+2019-09-21 16:19:26.072 [ HikariPool-1 connection adder ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 702 ] - HikariPool-1 - Added connection com.mysql.jdbc.JDBC4Connection@4cb95c46
+2019-09-21 16:19:26.073 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@748e1263: (connection evicted)
+2019-09-21 16:19:26.074 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@766d352c: (connection evicted)
+2019-09-21 16:19:26.075 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@6d58fdf3: (connection evicted)
+2019-09-21 16:19:26.077 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@4f20cfe0: (connection evicted)
+2019-09-21 16:19:26.081 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@a218302: (connection evicted)
+2019-09-21 16:19:26.083 [ HikariPool-1 connection closer ] - [ DEBUG ] [ com.zaxxer.hikari.pool.PoolBase : 127 ] - HikariPool-1 - Closing connection com.mysql.jdbc.JDBC4Connection@4cb95c46: (connection evicted)
+2019-09-21 16:19:26.084 [ Thread-1 ] - [ DEBUG ] [ com.zaxxer.hikari.pool.HikariPool : 404 ] - HikariPool-1 - After shutdown stats (total=0, active=0, idle=0, waiting=0)
+2019-09-21 16:19:26.084 [ Thread-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
+2019-09-21 16:21:13.402 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 50 ] - Starting SpringBootMybatisCache2RedisApplicationTests on HYJ-1 with PID 10060 (started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:21:13.405 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:21:18.083 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 59 ] - Started SpringBootMybatisCache2RedisApplicationTests in 5.866 seconds (JVM running for 7.608)
+2019-09-21 16:21:18.277 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:21:18.639 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:21:18.931 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:21:18.961 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
+2019-09-21 16:21:47.270 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 50 ] - Starting SpringBootMybatisCache2RedisApplicationTests on HYJ-1 with PID 2424 (started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:21:47.295 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:21:51.733 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 59 ] - Started SpringBootMybatisCache2RedisApplicationTests in 5.391 seconds (JVM running for 6.789)
+2019-09-21 16:21:51.928 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:21:52.277 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:21:52.603 [ main ] - [ INFO  ] [ io.lettuce.core.EpollProvider : 101 ] - Starting without optional epoll library
+2019-09-21 16:21:52.606 [ main ] - [ INFO  ] [ io.lettuce.core.KqueueProvider : 101 ] - Starting without optional kqueue library
+2019-09-21 16:21:53.301 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:21:53.308 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
+2019-09-21 16:24:55.584 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 50 ] - Starting SpringBootMybatisCache2RedisApplicationTests on HYJ-1 with PID 10780 (started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:24:55.594 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:25:00.328 [ main ] - [ INFO  ] [ c.e.d.SpringBootMybatisCache2RedisApplicationTests : 59 ] - Started SpringBootMybatisCache2RedisApplicationTests in 5.636 seconds (JVM running for 6.987)
+2019-09-21 16:25:00.562 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:25:00.894 [ main ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:25:01.171 [ main ] - [ INFO  ] [ io.lettuce.core.EpollProvider : 101 ] - Starting without optional epoll library
+2019-09-21 16:25:01.173 [ main ] - [ INFO  ] [ io.lettuce.core.KqueueProvider : 101 ] - Starting without optional kqueue library
+2019-09-21 16:25:01.870 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:25:01.881 [ Thread-2 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
+2019-09-21 16:30:51.357 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 50 ] - Starting SpringBootMybatisCache2RedisApplication on HYJ-1 with PID 9420 (H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:30:51.364 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:30:55.927 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Initializing ProtocolHandler ["http-nio-8080"]
+2019-09-21 16:30:55.944 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Starting service [Tomcat]
+2019-09-21 16:30:55.945 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 180 ] - Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-09-21 16:30:55.959 [ localhost-startStop-1 ] - [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 180 ] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\programFiles\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;H:\app\oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;G:\programFiles\Java\jdk1.8.0_121\bin;C:\Program Files\TortoiseSVN\bin;G:\app_eclipse\app-eclipse\sdk\platform-tools;G:\app_eclipse\app-eclipse\sdk\tools;f:\Program Files\Git\cmd;G:\programFiles\apache-maven-3.3.9\bin;d:\Program Files\erl10.0.1\bin;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.16\sbin;G:\programFiles\Java\zookeeper-3.4.14\bin;H:\Programs\Python\Python36-32\Scripts\;H:\Programs\Python\Python36-32\;J:\Programs\Python\Python36-32\Scripts\;J:\Programs\Python\Python36-32\;F:\Program Files\Fiddler;.]
+2019-09-21 16:30:56.171 [ localhost-startStop-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring embedded WebApplicationContext
+2019-09-21 16:30:58.398 [ main ] - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-21 16:30:59.768 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-09-21 16:30:59.879 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-09-21 16:31:00.008 [ main ] - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-09-21 16:31:00.190 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Starting ProtocolHandler ["http-nio-8080"]
+2019-09-21 16:31:00.205 [ main ] - [ ERROR ] [ org.apache.catalina.core.StandardService : 182 ] - Failed to start connector [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Failed to start component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:256)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:198)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at com.example.demo.SpringBootMybatisCache2RedisApplication.main(SpringBootMybatisCache2RedisApplication.java:12)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1020)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 common frames omitted
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:433)
+	at sun.nio.ch.Net.bind(Net.java:425)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1150)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:591)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:1018)
+	... 14 common frames omitted
+2019-09-21 16:31:00.211 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Pausing ProtocolHandler ["http-nio-8080"]
+2019-09-21 16:31:00.228 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Stopping service [Tomcat]
+2019-09-21 16:31:00.248 [ main ] - [ INFO  ] [ org.apache.catalina.util.LifecycleBase : 180 ] - The stop() method was called on component [StandardServer[-1]] after stop() had already been called. The second call will be ignored.
+2019-09-21 16:31:00.249 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Stopping ProtocolHandler ["http-nio-8080"]
+2019-09-21 16:31:00.250 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Destroying ProtocolHandler ["http-nio-8080"]
+2019-09-21 16:31:00.264 [ main ] - [ ERROR ] [ o.s.b.diagnostics.LoggingFailureAnalysisReporter : 42 ] - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2019-09-21 16:32:15.430 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 50 ] - Starting SpringBootMybatisCache2RedisApplication on HYJ-1 with PID 8288 (H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:32:15.438 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:32:19.156 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Initializing ProtocolHandler ["http-nio-8090"]
+2019-09-21 16:32:19.174 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Starting service [Tomcat]
+2019-09-21 16:32:19.175 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 180 ] - Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-09-21 16:32:19.190 [ localhost-startStop-1 ] - [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 180 ] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\programFiles\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;H:\app\oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;G:\programFiles\Java\jdk1.8.0_121\bin;C:\Program Files\TortoiseSVN\bin;G:\app_eclipse\app-eclipse\sdk\platform-tools;G:\app_eclipse\app-eclipse\sdk\tools;f:\Program Files\Git\cmd;G:\programFiles\apache-maven-3.3.9\bin;d:\Program Files\erl10.0.1\bin;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.16\sbin;G:\programFiles\Java\zookeeper-3.4.14\bin;H:\Programs\Python\Python36-32\Scripts\;H:\Programs\Python\Python36-32\;J:\Programs\Python\Python36-32\Scripts\;J:\Programs\Python\Python36-32\;F:\Program Files\Fiddler;.]
+2019-09-21 16:32:19.370 [ localhost-startStop-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring embedded WebApplicationContext
+2019-09-21 16:32:21.483 [ main ] - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-21 16:32:22.634 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-09-21 16:32:22.672 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-09-21 16:32:22.724 [ main ] - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-09-21 16:32:22.948 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Starting ProtocolHandler ["http-nio-8090"]
+2019-09-21 16:32:22.972 [ main ] - [ INFO  ] [ org.apache.tomcat.util.net.NioSelectorPool : 180 ] - Using a shared selector for servlet write/read
+2019-09-21 16:32:23.058 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 59 ] - Started SpringBootMybatisCache2RedisApplication in 8.657 seconds (JVM running for 9.603)
+2019-09-21 16:32:47.359 [ http-nio-8090-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-21 16:33:06.728 [ http-nio-8090-exec-10 ] - [ INFO  ] [ io.lettuce.core.EpollProvider : 101 ] - Starting without optional epoll library
+2019-09-21 16:33:06.738 [ http-nio-8090-exec-10 ] - [ INFO  ] [ io.lettuce.core.KqueueProvider : 101 ] - Starting without optional kqueue library
+2019-09-21 16:33:07.510 [ http-nio-8090-exec-10 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:33:07.826 [ http-nio-8090-exec-10 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:36:50.108 [ Thread-3 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:36:50.132 [ Thread-3 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
+2019-09-21 16:36:59.054 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 50 ] - Starting SpringBootMybatisCache2RedisApplication on HYJ-1 with PID 4604 (H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:36:59.067 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:37:03.203 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Initializing ProtocolHandler ["http-nio-8090"]
+2019-09-21 16:37:03.226 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Starting service [Tomcat]
+2019-09-21 16:37:03.226 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 180 ] - Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-09-21 16:37:03.248 [ localhost-startStop-1 ] - [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 180 ] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\programFiles\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;H:\app\oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;G:\programFiles\Java\jdk1.8.0_121\bin;C:\Program Files\TortoiseSVN\bin;G:\app_eclipse\app-eclipse\sdk\platform-tools;G:\app_eclipse\app-eclipse\sdk\tools;f:\Program Files\Git\cmd;G:\programFiles\apache-maven-3.3.9\bin;d:\Program Files\erl10.0.1\bin;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.16\sbin;G:\programFiles\Java\zookeeper-3.4.14\bin;H:\Programs\Python\Python36-32\Scripts\;H:\Programs\Python\Python36-32\;J:\Programs\Python\Python36-32\Scripts\;J:\Programs\Python\Python36-32\;F:\Program Files\Fiddler;.]
+2019-09-21 16:37:03.464 [ localhost-startStop-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring embedded WebApplicationContext
+2019-09-21 16:37:05.138 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Stopping service [Tomcat]
+2019-09-21 16:37:05.205 [ main ] - [ ERROR ] [ org.springframework.boot.SpringApplication : 845 ] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'testController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\com\example\demo\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:762)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:398)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:330)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1258)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1246)
+	at com.example.demo.SpringBootMybatisCache2RedisApplication.main(SpringBootMybatisCache2RedisApplication.java:12)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userMapper' defined in file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\com\example\demo\mapper\UserMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1436)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1323)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:572)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:514)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:485)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:619)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:177)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:318)
+	... 17 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1247)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1135)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1062)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1421)
+	... 30 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:582)
+	... 42 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes\mapper\UserMapper.xml]'; nested exception is java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:523)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:380)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:547)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:153)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8afcf96e.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8afcf96e$$FastClassBySpringCGLIB$$471a1b96.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:361)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$8afcf96e.sqlSessionFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 43 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Caches collection already contains value for com.example.demo.mapper.UserMapper
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:872)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:844)
+	at org.apache.ibatis.session.Configuration.addCache(Configuration.java:606)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.useNewCache(MapperBuilderAssistant.java:140)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parseCache(MapperAnnotationBuilder.java:184)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:127)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:741)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.bindMapperForNamespace(XMLMapperBuilder.java:413)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:94)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:521)
+	... 56 common frames omitted
+2019-09-21 16:37:34.569 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 50 ] - Starting SpringBootMybatisCache2RedisApplication on HYJ-1 with PID 8280 (H:\workspace\spring-boot-mybatis-cache2-redis-master\target\classes started by Administrator in H:\workspace\spring-boot-mybatis-cache2-redis-master)
+2019-09-21 16:37:34.576 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 662 ] - No active profile set, falling back to default profiles: default
+2019-09-21 16:37:38.698 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Initializing ProtocolHandler ["http-nio-8090"]
+2019-09-21 16:37:38.720 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardService : 180 ] - Starting service [Tomcat]
+2019-09-21 16:37:38.721 [ main ] - [ INFO  ] [ org.apache.catalina.core.StandardEngine : 180 ] - Starting Servlet Engine: Apache Tomcat/8.5.32
+2019-09-21 16:37:38.738 [ localhost-startStop-1 ] - [ INFO  ] [ org.apache.catalina.core.AprLifecycleListener : 180 ] - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [G:\programFiles\Java\jdk1.8.0_121\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;H:\app\oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;G:\programFiles\Java\jdk1.8.0_121\bin;C:\Program Files\TortoiseSVN\bin;G:\app_eclipse\app-eclipse\sdk\platform-tools;G:\app_eclipse\app-eclipse\sdk\tools;f:\Program Files\Git\cmd;G:\programFiles\apache-maven-3.3.9\bin;d:\Program Files\erl10.0.1\bin;D:\Program Files\RabbitMQ Server\rabbitmq_server-3.7.16\sbin;G:\programFiles\Java\zookeeper-3.4.14\bin;H:\Programs\Python\Python36-32\Scripts\;H:\Programs\Python\Python36-32\;J:\Programs\Python\Python36-32\Scripts\;J:\Programs\Python\Python36-32\;F:\Program Files\Fiddler;.]
+2019-09-21 16:37:38.989 [ localhost-startStop-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring embedded WebApplicationContext
+2019-09-21 16:37:41.210 [ main ] - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-09-21 16:37:42.676 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-09-21 16:37:42.712 [ main ] - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-09-21 16:37:42.765 [ main ] - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-09-21 16:37:42.938 [ main ] - [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 180 ] - Starting ProtocolHandler ["http-nio-8090"]
+2019-09-21 16:37:42.974 [ main ] - [ INFO  ] [ org.apache.tomcat.util.net.NioSelectorPool : 180 ] - Using a shared selector for servlet write/read
+2019-09-21 16:37:43.017 [ main ] - [ INFO  ] [ c.e.demo.SpringBootMybatisCache2RedisApplication : 59 ] - Started SpringBootMybatisCache2RedisApplication in 9.478 seconds (JVM running for 10.313)
+2019-09-21 16:37:53.588 [ http-nio-8090-exec-1 ] - [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 180 ] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2019-09-21 16:38:00.023 [ http-nio-8090-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 110 ] - HikariPool-1 - Starting...
+2019-09-21 16:38:00.345 [ http-nio-8090-exec-1 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 123 ] - HikariPool-1 - Start completed.
+2019-09-21 16:41:20.248 [ Thread-3 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 381 ] - HikariPool-1 - Shutdown initiated...
+2019-09-21 16:41:20.296 [ Thread-3 ] - [ INFO  ] [ com.zaxxer.hikari.HikariDataSource : 383 ] - HikariPool-1 - Shutdown completed.
